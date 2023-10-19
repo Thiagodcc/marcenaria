@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+a {
+    color: black;
+}
+
+.cabeca {
+    display: flex;
+    width: 90%;
+    
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+}
+
+
+
+.titulo1 {
+    font-family: 'Staatliches', sans-serif;
+
+
+
+}
