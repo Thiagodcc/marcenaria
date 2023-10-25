@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
 }
@@ -16,6 +17,21 @@ p {
     font-style: none;
     font-display: none;
     font-size: 18px;
+}
+
+.font_titulo {
+    font-family: 'Staatliches', sans-serif;
+}
+
+.centro {
+    width: 100%;
+}
+
+
+.caixa_texto_cor {
+    background-color: #c47843;
+    border-radius: 10px;
+    padding: 20px 10px 10px 15px;
 }
 
 .cabeca {
@@ -84,7 +100,7 @@ header .cabeca img {
     left: 5%;
     top: 50%;
     background-color: white;
-    padding: 30px 40px 20px 50px;
+    padding: 30px 40px 40px 50px;
     border-radius: 15px;
     
 }
@@ -223,6 +239,9 @@ section {
 
 .caixa_rodape .rodape .menu {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .caixa_projetos {
@@ -242,8 +261,7 @@ section {
 .caixa_projetos .tag_projetos {
     position: absolute;
     background-color: #c47843;
-    height: 100px;
-    width: 300px;
+   width: 150px;
     border-radius: 6px;
     top: 40%;
     left: 4.3%;
@@ -260,8 +278,93 @@ section {
     padding-left: 20px;
 }
 
+.banner_projeto {
+    position: relative;
+    height: 820px;
+    margin-bottom: 200px;
+
+}
+
+.banner_projeto .titulo_projeto {
+    width: 270px;
+    height: 200px; 
+    position: absolute;
+    bottom: -5%;
+    left: 10%;
+}
+
+.banner_projeto .titulo_projeto h1, .banner_projeto .titulo_projeto p {
+ padding-left: 20px;
+}
+
+.projeto_intro {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    margin-bottom: 300px;
+}
+
+.projeto_intro .texto_intro {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    width: 200px;  
+}
+
+.imagem_principal img {
+    width: 100%;
+    object-fit: cover;
+    height: 800px;
+}
 
 
+
+.projeto_intro2 {
+    display: flex;
+    margin-right: auto;
+    flex-direction: column;
+    padding-left: 60px;
+    width: 60%;
+    position: relative;
+    margin-bottom: 200px;
+
+}
+
+
+.projeto_intro2 .texto_intro2 {
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    width: 200px; 
+    
+}
+
+.outros_projetos {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 150px;
+    justify-content: space-between;
+}
+
+.caixa_outros {
+    height: 150px;
+   
+}
+
+.outros {
+    width: 238px;
+    
+
+}
+
+.titulo_outro {
+    font-size: 30px;
+    width: 100px;
+
+}
 
 
 
