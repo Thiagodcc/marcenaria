@@ -68,6 +68,12 @@ header .cabeca img {
 
 }
 
+.menu li :hover {
+    background-color: #c47843;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
 .pagina_atual {
     background-color: #c47843;
 }
@@ -132,8 +138,9 @@ header .cabeca img {
     margin: auto;
 }
 
-.botao {
+.botao p {
     background-color: #c47843;
+
     width: 110px;
     margin: auto;
     text-align: center;
@@ -142,11 +149,26 @@ header .cabeca img {
     padding: 1px 10px 1px 10px;
     margin-top: 100px;
     font-family: 'Staatliches', sans-serif;
+    display: flex;
+    justify-content: center;
 } 
+
+.botao  :hover {
+    font-size: 25px;
+    border-radius: 30px;
+    transition: 0.5s;
+
+}
 
 .botao2 {
     font-family: 'Staatliches', sans-serif;
+    
    
+}
+
+.botao_hover .botao2 :hover {
+    font-size: 25px;
+    transition: 0.5s;
 }
 
 section {
@@ -184,18 +206,20 @@ section {
 }
 
 .secao .caixa_moveis .botao2 {
-    display: flex;
-    background-color: white; 
     margin-right: auto;
-    text-align: center;
+    background-color: white; 
     border-radius: 4px;
     font-size: 20px;
     width: 110px;
-    padding-left: 35px;
-
-    
+    text-align: center;
     
 }
+.secao .caixa_moveis .botao2 :hover {
+    font-size: 25px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
 .depoimento {
      display: flex;
      height: 800px;
@@ -299,6 +323,14 @@ section {
     height: 70px;
 
 }
+.caixa_projetos a :hover {
+    width: 300px;
+    border-radius: 15px;
+    transition: 0.5s;
+    
+
+}
+
 
 .titulo3 {
     font-size: 20px;
