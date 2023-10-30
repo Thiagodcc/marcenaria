@@ -124,7 +124,10 @@ header .cabeca img {
 }
 
 .principais {
+    display: flex;
+    flex-direction: column;
    width: 500px; 
+   height: 1200px;
    margin: auto;
    margin-bottom: 200px;
 
@@ -222,7 +225,7 @@ section {
 
 .depoimento {
      display: flex;
-     height: 800px;
+     height: 1200px;
      width: 90%;
      margin: auto;
      margin-bottom: 300px;
@@ -232,6 +235,10 @@ section {
     margin: auto;
     
     
+}
+
+.caixa_depoimento div {
+    height: 600px;
 }
 
 .depoimento .cliente {
@@ -251,6 +258,7 @@ section {
 
 .home_quem_somos {
     width: 50%;
+    height: 600px;
     margin: auto;
 }
 
