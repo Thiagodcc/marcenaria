@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav class="cabeca centro">
+        <nav class="cabeca centro" id="anima1">
             <img src="img/logo_menu.png" alt="logo">
            <ul class="menu">
                 <li> <a href="index.html" class="pagina_atual">Home</a></li>
@@ -26,10 +26,10 @@
         </nav>
     </header>
     <div class="centro">
-    <main class="banner">
+    <main class="banner" id="anima1">
 
         <img src="img/banner_madeira.jpg" alt="valentina-giarre-jEpGmFHuv-o-unsplash">
-        <div class="caixa_titulo">
+        <div class="caixa_titulo" >
             <h1 class="titulo1 titulo_sublinhado">
                 transformando madeira em espaços personalizados
             </h1>
@@ -44,12 +44,12 @@
         
     </main>
 
-    <section class="principais">
-        <h1 class="titulo1 titulo_centralizado titulo_sublinhado">
+    <section class="principais" id="anima2">
+        <h1 class="titulo1 titulo_centralizado titulo_sublinhado" >
             Principais projetos
         </h1>
-        <div class="carrosel">
-            <img src="img/principais_projetos.jpg" alt="pexels-max-rahubovskiy-6782465">
+        <div class="carrosel" >
+            <img src="img/principais_projetos.jpg" alt="pexels-max-rahubovskiy-6782465" >
         </div>
 
         <p class="texto1 texto_centralizado">
@@ -150,6 +150,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
 
 
 <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
@@ -158,15 +159,76 @@
 
     <script>
 
-        console.log(document.querySelector('h1'))
-        document.querySelector('h1').innerText ='Seila porra';
-
     </script>
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to
+        let=tl2 = gsap.timeline({
+            scrollTrigger: {
+            trigger: '#anima2',
+            start: "top",
+            end: "70%%",
+            scrub: 1,
+            pin: true,
+            markers: true,
+            toggleActions: 'play pause reverse complete',
+            paused: true,
+            
+  }
+        }
+        )
+        
+        tl2.from('#anima2',{
+            x:200, 
+            opacity:0,
+            duration: 0.8,
+            stagger:0.8,
+           
+        
+           
+        });
+
+        
+
+
+        
+
+
+
+
+
+        //scrol mais de boa
+
+        const lenis = new Lenis()
+
+            lenis.on('scroll', (e) => {
+                console.log(e)
+                        })
+
+                        function raf(time) {
+                    lenis.raf(time)
+                    requestAnimationFrame(raf)
+            }
+
+requestAnimationFrame(raf)
+
+
+
+     var tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+        tl.to("#anima1", {x: 100, duration: 1, opacity: 0});
+        tl.to("#anima1", {y: 50, duration: 1});
+        tl.to("#anima1", {opacity: 0, duration: 1});
+        
+
+
+      //then we can control the whole thing easily...
+        tl.pause();
+        tl.resume();
+        tl.seek(1.5);
+        tl.reverse();
+
+
+
 
     </script>
 
