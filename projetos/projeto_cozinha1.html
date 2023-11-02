@@ -135,7 +135,35 @@
         </nav>
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+
+
+    <script>
+
+        //animando menu
+
+        let=tl = gsap.timeline({defaults:
+            {ease: "power3.out",
+            
+            }
+
+        });
+        tl.from(".cabeca", {x: 50, duration: 1, opacity: 0})
+        .from(".banner img", {opacity: 0, y: -50, duration: 0.5})
+        .from(".caixa_titulo h1", {opacity: 0,y: 50, duration: 1.5});
+     
+       
+
+    </script>
 
 
 

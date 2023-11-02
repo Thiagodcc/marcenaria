@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav class="cabeca centro" id="anima1">
+        <nav class="cabeca centro">
             <img src="img/logo_menu.png" alt="logo">
            <ul class="menu">
                 <li> <a href="index.html" class="pagina_atual">Home</a></li>
@@ -26,9 +26,9 @@
         </nav>
     </header>
     <div class="centro">
-    <main class="banner" id="anima1">
+    <main class="banner">
 
-        <img src="img/banner_madeira.jpg" alt="valentina-giarre-jEpGmFHuv-o-unsplash">
+        <img src="img/banner_madeira.jpg" alt="valentina-giarre-jEpGmFHuv-o-unsplash" id="anima3">
         <div class="caixa_titulo" >
             <h1 class="titulo1 titulo_sublinhado">
                 transformando madeira em espaços personalizados
@@ -44,8 +44,8 @@
         
     </main>
 
-    <section class="principais" id="anima2">
-        <h1 class="titulo1 titulo_centralizado titulo_sublinhado" >
+    <section class="principais" >
+        <h1 class="titulo1 titulo_centralizado titulo_sublinhado">
             Principais projetos
         </h1>
         <div class="carrosel" >
@@ -64,7 +64,7 @@
 
     </section>
 
-    <section>
+    <section id="animacao1">
         <div class="secao">
             <div class="caixa_moveis">
                 <h2 class="titulo1">
@@ -159,40 +159,144 @@
 
     <script>
 
+        //animando menu
+
+        let=tl = gsap.timeline({defaults:
+            {ease: "power3.out",
+            
+            }
+
+        });
+        tl.from(".cabeca", {x: 50, duration: 1, opacity: 0})
+        .from(".banner img", {opacity: 0, y: -50, duration: 0.5})
+        .from(".caixa_titulo h1", {opacity: 0,y: 50, duration: 1.5});
+        
+
+         //moveis personalizados
+
+         let= tl2 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#animacao1",
+                start: "center 70%",
+                endTrigger: "#animacao1",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+
+        tl2.from(".caixa_moveis", {x: 50, duration: 1, opacity: 0})
+        .from(".caixa_moveis h2", {x: 50, duration: 1, opacity: 0, delay: 1},"+=200")
+        .from(".caixa_moveis p", {x: 150, duration: 1.5, opacity: 0, delay: 2},"+=200")
+        .from("#animacao1 .secao img", {x: -150, duration: 1.8, opacity: 0, delay: 3},"+=500")
+
+
+
+        //depoimento de clientes
+
+        let= tl3 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".depoimento",
+                start: "center 70%",
+                endTrigger: ".depoimento",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+        tl3.from(".depoimento h2", {x: 50, duration: 1, opacity: 0})
+
+
+        //quem somos
+
+
     </script>
 
-    <script>
+   <!-- <script>
+        //scroll 
+        //moveis personalizados
+        
+        let=tl5 = gsap.timeline({defaults: {
 
-        let=tl2 = gsap.timeline({
+            ease: "power3.out",
             scrollTrigger: {
-            trigger: '#anima2',
+            trigger: '#animacao1',
             start: "top",
-            end: "70%%",
+            end: "100%",
             scrub: 1,
             pin: true,
             markers: true,
             toggleActions: 'play pause reverse complete',
             paused: true,
             
-  }
+            }}
         }
         )
         
-        tl2.from('#anima2',{
+        tl.from('#animacao1',{
             x:200, 
             opacity:0,
             duration: 0.8,
             stagger:0.8,
            
+        })
+
+        //principais projetos
+        let=tl2 = gsap.timeline({defaults: {
+
+        ease: "power3.out",
+        scrollTrigger: {
+        trigger: '.principais',
+        start: "top",
+        end: "20%",
+        scrub: 1,
+        pin: true,
+        markers: true,
+        toggleActions: 'play pause reverse complete',
+        paused: true,
+
+        }}
+            }
+        )
+
+        tl2.from('.principais h1',{
+        x:200, 
+        opacity:0,
+        duration: 0.8,
+        stagger:0.8,
+
+        },"-=2")
+
+        .to('.principais .caixa_moveis',{
+        x:100, 
+        opacity:0,
+        duration: 0.8,
+        stagger:0.8,
+        delay: 2,
+       
+
+        },"-=2")
         
-           
-        });
-
         
 
 
-        
-
+       
 
 
 
@@ -214,11 +318,11 @@ requestAnimationFrame(raf)
 
 
 
-     var tl = gsap.timeline({repeat: 2, repeatDelay: 1});
-        tl.to("#anima1", {x: 100, duration: 1, opacity: 0});
-        tl.to("#anima1", {y: 50, duration: 1});
-        tl.to("#anima1", {opacity: 0, duration: 1});
-        
+     var tl = gsap.timeline({ease:"power3.out", repeatDelay: 1});
+        tl.to("#anima1", {x: 50, duration: 1, opacity: 0});
+        tl.to("#anima1", {y: -50, duration: 0.5});
+        tl.to("#anima1", {opacity: 0});
+     
 
 
       //then we can control the whole thing easily...
@@ -227,10 +331,28 @@ requestAnimationFrame(raf)
         tl.seek(1.5);
         tl.reverse();
 
+        let tl3 = gsap.timeline({ defaults: {ease: "power3.out", repeat: 0, repeatDelay: 2}});
+        tl3.to('#anima4', {'clip-path': 'polygon(0% 100%, 93% 100%, 100% 100%, 0% 100%);',opacity: 0 ,y: 20, duration:2, transform: 'translateY:(100)', })
+            .to('#anima3', {opacity:0, y:50 }, "-=1")
+            .to('#anima5', {opacity:0, y:100, duration:3},"-=2")
+            .to('.menu li', {opacity:0, x:-100, duration:3, stagger: 0.3 },"-=3")
+            .to('.pagina_atual', {transform: 'translateY(200)', y:-100, duration:5, stagger: 0.3 },"-=2")
+
+            
 
 
+      //then we can control the whole thing easily...
+        tl3.pause();
+        tl3.resume();
+        tl3.seek(1.5);
+        tl3.reverse();
+            
 
-    </script>
+
+       
+    </script> -->
+
+
 
 
     

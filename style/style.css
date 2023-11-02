@@ -52,6 +52,13 @@ a {
     
 }
 
+#anima4{
+    
+clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+
+
+}
+
 header .cabeca img {
     height: 50px;
 }
@@ -82,6 +89,7 @@ header .cabeca img {
 .titulo1 {
     font-family: 'Staatliches', sans-serif;
     font-size: 40px;
+   
 }
 
 .titulo_sublinhado {
