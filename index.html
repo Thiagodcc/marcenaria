@@ -107,6 +107,7 @@
         </div>
         <div class="cliente">
             <img src="img/cliente.png" alt="">
+            <div class="faixa_laranja"></div>
         </div>
    </section>
 
@@ -221,7 +222,9 @@
 
         });
         tl3.from(".depoimento h2", {x: 50, duration: 1, opacity: 0})
-
+        .from(".depoimento .cliente", {y: 200})
+        .from(".depoimento .cliente .faixa_laranja", {scaleY:0, duration: 2}, "+=500")
+        .from(".depoimento p", {x: 250, duration: 1, opacity: 0, delay: 2})
 
         //quem somos
 

@@ -250,10 +250,19 @@ section {
 }
 
 .depoimento .cliente {
-    background-color: #c47843;
+    
     width: 400px;
     position: relative;
 }
+.depoimento .cliente .faixa_laranja {
+    position: absolute;
+    background-color: #c47843;
+    z-index: -1;
+    width: 400px;
+    height: 800px;
+    transform-origin: bottom center;
+}
+
 
 
 .depoimento .cliente img {
