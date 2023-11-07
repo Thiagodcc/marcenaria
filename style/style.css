@@ -457,10 +457,12 @@ section {
 
 .outros_projetos {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-bottom: 150px;
     justify-content: space-between;
+    flex-direction: row;
+    
 }
 
 .caixa_outros {
@@ -472,8 +474,10 @@ section {
     width: 238px;
     transform-origin: bottom center;
     
+    
 
 }
+
 
 .titulo_outro {
     font-size: 30px;
