@@ -111,7 +111,7 @@
         </div>
    </section>
 
-   <section>
+   <section class="somos_anima">
         <div class="home_quem_somos">
             <h2 class="titulo1">
                 quem somos
@@ -222,11 +222,34 @@
 
         });
         tl3.from(".depoimento h2", {x: 50, duration: 1, opacity: 0})
-        .from(".depoimento .cliente", {y: 200})
+        .from(".depoimento .cliente", {y: 200, opacity: 0})
         .from(".depoimento .cliente .faixa_laranja", {scaleY:0, duration: 2}, "+=500")
         .from(".depoimento p", {x: 250, duration: 1, opacity: 0, delay: 2})
 
         //quem somos
+
+        let= tl4 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".somos_anima",
+                start: "center 70%",
+                endTrigger: ".somos_anima",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+        tl4.from(".home_quem_somos h2", {y: 50, duration: 1, opacity: 0})
+        .from(".home_quem_somos .discricao", {y: 200, opacity: 0})
+        
+        
 
 
     </script>

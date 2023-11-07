@@ -43,7 +43,7 @@
         <img src="../img/cozinha1/cozinha1_intro.jpg" alt="r-architecture-TRCJ-87Yoh0-unsplash copiar">
       
 
-        <p class="texto_intro caixa_texto_cor">
+        <p class="texto_intro">
             O Desafio
             Nossos clientes, um casal apaixonado pela arte da 
             culinária, procuravam transformar sua cozinha em um espaço 
@@ -53,6 +53,10 @@
             pela cozinha e pela luz natural.
             
         </p>
+
+        <div class="laranja_projetos">
+
+        </div>
 
        
         </div>
@@ -158,8 +162,81 @@
 
         });
         tl.from(".cabeca", {x: 50, duration: 1, opacity: 0})
-        .from(".banner img", {opacity: 0, y: -50, duration: 0.5})
-        .from(".caixa_titulo h1", {opacity: 0,y: 50, duration: 1.5});
+        .from(".banner_projeto img", {opacity: 0, y: 250, duration: 1})
+        .from(".titulo_projeto",{scale: 0})
+        .from(".banner_projeto h1", {opacity: 0,y: 50, duration: 1})
+        .from(".banner_projeto p", {opacity: 0,y: 50, duration: 0.5})
+
+        //animando o scroll
+
+        let= tl2 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".projeto_intro",
+                start: "top 70%",
+                endTrigger: ".projeto_intro",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+
+        tl2.from(".projeto_intro img", {x: 50, duration: 1, opacity: 0})
+        .from(".laranja_projetos", {y: 50, scaleY: 0, delay: 1},"+=200")
+        .from(".projeto_intro .texto_intro",{y:100, opacity: 0})
+        
+        
+        let= tl3 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".projeto_intro2",
+                start: "top 70%",
+                endTrigger: ".projeto_intro2",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+
+        tl3.from(".projeto_intro2 img", {x: 50, duration: 1, opacity: 0})
+        .from(".projeto_intro2 .texto_intro2",{y:100, opacity: 0},"+=200")
+
+        let= tl4 = gsap.timeline({defaults:
+            {ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".outros_projetos",
+                start: "top 70%",
+                endTrigger: ".outros_projetos",
+                end: "center center",
+                scrub: 1,
+                pin: false,
+                markers: true,
+                toggleActions: 'play pause reverse complete',
+                paused: true,
+                duration: 0.8,
+            
+            }
+            }
+
+        });
+
+        tl4.from(".outros_projetos .outros", {y: 50,scaleY:0.5, duration: 1, opacity: 0},"+=200")
+        .from(".outros_projetos .titulo_outro",{y:100, opacity: 0},)
+
      
        
 
