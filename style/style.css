@@ -43,6 +43,9 @@ a {
     border-radius: 10px;
     padding: 20px 10px 10px 15px;
 }
+.mobile {
+    display: none;
+}
 
 .cabeca {
     display: flex;
@@ -641,4 +644,43 @@ font-size: 100px;
     }
 }
 
+@media (max-width: 499px) {
+
+    .mobile {
+        display: block;
+
+    }
+    .menu {
+        flex-direction: column;
+        margin-right: auto;
+        display: none;
+    }
+    .menu a {
+        margin-left: 0;
+        display: block;
+        padding-top: 10px;
+    }
+    .navegacao {
+        flex-direction: column;
+    }
+
+    .cabeca {
+        position: fixed;
+        z-index: 100;
+        background-color: aliceblue;
+        width: 90%;
+    }
+    header .cabeca img {
+        margin-left: 30px;
+    }
+
+    .mobile {
+        margin-left: auto;
+    }
+
+
+    
+    
+
+}
 
