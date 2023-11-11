@@ -306,7 +306,7 @@ section {
 
 .caixa_rodape {
     background-color: #c47843;
-    height: 500px;
+    height: 300px;
 }
 
 .caixa_rodape .rodape {
@@ -490,6 +490,8 @@ section {
     position: relative;
     background-image: url("/img/quarto_quem_somos.jpg") ;
     height: 2500px;
+    background-repeat: no-repeat;
+        background-position: top,center;
 }
 
 .caixa_quem_somos img {
@@ -542,3 +544,101 @@ font-size: 100px;
     margin-top: auto;
 
 }
+
+/*telas grander com 2500px*/
+@media (min-width: 1441px) {
+    .secao{width:50%}
+
+    .depoimento{
+        width: 40%;
+    }
+
+    .discricao  {
+        width: 500px;
+        margin: auto;
+    }
+
+    .caixa_quem_somos .somos1 {
+        width: 50%;
+    }
+    .caixa_quem_somos .somos2 p {
+        width: 500px;
+    }
+    .projeto_intro .texto_intro {
+        top: 28%;
+        left: -15%;
+    }
+    .outros_projetos {
+        width: 60%;
+    }
+}
+/* telas media anos notebook*/
+@media (min-width: 1281px) {
+    .secao{width:70%}
+    .secao img {
+        width: 400px;
+    }
+    .depoimento .cliente img {
+        width: 400px;
+        bottom: 30%;
+    }
+    .projeto_intro .texto_intro {
+        left: -12%;
+    } 
+
+}
+/* telas de notebook pequenos*/
+@media (min-width: 821px) {
+    .secao{width:70%}
+    .depoimento .cliente img {
+        width: 300px;
+        bottom: 50%;
+        right: 20%;
+        }
+        .secao img {
+            width: 350px;
+            left: 60%;
+        }
+    
+}
+
+/* telas de tablet*/
+@media (min-width: 500px) {
+    .secao img {
+        width: 350px;
+        left: 50%;
+    }
+    .secao .caixa_moveis p {
+        width: 300px;
+    }
+    .projeto_intro .laranja_projetos {
+        left: -50%;
+    }
+    .projeto_intro .texto_intro {
+        left: -40%;
+    }
+
+    .projeto_intro2 .texto_intro2 {
+        right: -40%; 
+    } 
+
+    .outros {
+        width: 200px;
+    }
+
+    .outros img {
+        object-fit: contain;
+        width: 190px;
+        display: flex;
+        margin: auto;
+    }
+    .caixa_rodape .rodape {
+        width: 70%;
+    }
+
+    .caixa_quem_somos .somos2 p {
+        width: 300px;
+    }
+}
+
+
