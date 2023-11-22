@@ -143,6 +143,11 @@ header .cabeca img {
    margin-bottom: 200px;
 
 }
+
+.principais .botao {
+    display: flex;
+    margin: auto;
+}
 .carrosel {
     margin-bottom: 70px;
 }
@@ -156,7 +161,7 @@ header .cabeca img {
     background-color: #c47843;
 
     width: 110px;
-    margin: auto;
+   
     text-align: center;
     border-radius: 4px;
     font-size: 20px;
@@ -189,7 +194,7 @@ section {
     margin-bottom: 150px;
 }
 .secao {
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: flex;
     height: 800px ;
@@ -215,8 +220,8 @@ section {
 
 .secao img {
     position: absolute;
-    left: 50%;
-    width: 500px;
+    left: 60%;
+    width: 650px;
 }
 
 .secao .caixa_moveis .botao2 {
@@ -237,8 +242,8 @@ section {
 .depoimento {
      display: flex;
      height: 1200px;
-     width: 90%;
-     margin: auto;
+     width: 75%;
+     
      margin-bottom: 300px;
      }
 .caixa_depoimento {
@@ -287,6 +292,11 @@ section {
     font-size: 60px;
     margin-bottom: 50px;
 }
+.home_quem_somos .botao p {
+    display: flex;
+    margin: auto;
+}
+
 
 .discricao {
     margin-bottom: 80px;
@@ -412,14 +422,14 @@ section {
 .projeto_intro .texto_intro {
     position: absolute;
     top: 30%;
-    left: -10%;
+    left: -15%;
     width: 200px; 
     z-index: 2; 
 }
 
 .projeto_intro .laranja_projetos{
     position: absolute;
-    top: 25%;
+    top: 28%;
     left: -18%;
     width: 300px; 
     height: 400px;
@@ -460,7 +470,7 @@ section {
 
 .outros_projetos {
     display: flex;
-    width: 90%;
+    width: 70%;
     margin: auto;
     margin-bottom: 150px;
     justify-content: space-between;
@@ -550,10 +560,10 @@ font-size: 100px;
 
 /*telas grander com 2500px*/
 @media (max-width: 1441px) {
-    .secao{width:50%}
+    .secao{width:80%}
 
     .depoimento{
-        width: 40%;
+        width: 80%;
     }
 
     .discricao  {
@@ -561,11 +571,16 @@ font-size: 100px;
         margin: auto;
     }
 
+    .home_quem_somos .discricao {
+        margin-bottom: 30px;
+    }
+
     .caixa_quem_somos .somos1 {
         width: 50%;
     }
     .caixa_quem_somos .somos2 p {
         width: 500px;
+
     }
     .projeto_intro .texto_intro {
         top: 28%;
@@ -591,18 +606,125 @@ font-size: 100px;
 
 }
 /* telas de notebook pequenos*/
-@media (max-width: 821px) {
+@media (max-width: 1200px) {
     .secao{width:70%}
     .depoimento .cliente img {
         width: 300px;
         bottom: 50%;
         right: 20%;
         }
+
+        .secao {
+            width: 90%;
+        }
         .secao img {
             width: 350px;
             left: 60%;
         }
+        .depoimento {
+            width: 90%;
+        }
+        .home_quem_somos {
+            width: 90%
+        }
+
+        .projeto_intro .laranja_projetos {
+            top: 20%;
+            left: -40%;
+        }
+
+        .projeto_intro .texto_intro {
+            left: -35%;
+        }
+
+        .projeto_intro2 .texto_intro2 {
+            right: -43%;
+        } 
+
+        .outros_projetos {
+            width: 90%;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+        }
+
+        .caixa_texto_cor {
+            margin-bottom: 20px;
+        }
+
+        .caixa_quem_somos .somos1 {
+            width: 90%;
+        }
+
+        .caixa_quem_somos .somos2 {
+            flex-direction: column;
+        }
+
+        
     
+}
+
+@media (max-width: 750px) {
+    .mobile {
+        display: block;
+        margin-left: auto;
+        background-color: #c47843;
+        width: 100px;
+        font-family: 'Staatliches', sans-serif;
+        font-size: 20px;
+
+    }
+    .menu {
+        flex-direction: column;
+        margin-right: auto;
+        display: none;
+    }
+    .menu a {
+        margin-left: 0;
+        display: block;
+        padding-top: 10px;
+        
+    }
+
+}
+
+@media (max-width: 640px) {
+    
+
+    .secao img {
+        width: 150px;
+        top: 60%;
+    }
+
+    .depoimento {
+        flex-direction: column;
+    }
+    .depoimento .cliente .faixa_laranja {
+        display: none;
+    }
+
+    .depoimento .cliente img {
+       right: 0;
+    }
+    .discricao {
+        width: 80%;
+    }
+
+
+    .caixa_rodape {
+       padding-bottom: 50px ;
+    }
+    .caixa_rodape .rodape img {
+        padding-right: 20px;
+    }
+
+    .caixa_quem_somos .somos1 {
+        flex-direction: column;
+    }
+    .caixa_quem_somos .somos1 h1{
+        text-align: center;
+    }
+
 }
 
 /* telas de tablet*/
@@ -691,6 +813,17 @@ font-size: 100px;
         width: 250px;
     }
 
+    .projeto_intro .texto_intro {
+        left: 0%;
+        
+    }
+
+    .projeto_intro {
+        margin-bottom: 50px;
+    }
+
+    
+
     
     .titulo_sublinhado {
         margin-bottom: 30px;
@@ -714,8 +847,19 @@ font-size: 100px;
         width: 300px;
         
     }
+    .secao {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 400px;
+    }
     .secao img {
-        width: 150px;
+            width: 100px;
+            top: 100%;
+            left: 30%;
+        
+        
     }
 
     .secao .caixa_moveis p {
@@ -729,7 +873,7 @@ font-size: 100px;
 
     .depoimento .cliente img {
         width: 300px;
-        right: 20%;
+        right: 0;
         top: 10%;
         display: block;
         object-fit: contain;
@@ -789,7 +933,8 @@ font-size: 100px;
         margin-top: 30px;
         padding: 40px;
         border-radius: 20px;
-        margin-left: 70px;
+        margin-bottom: 50px;
+       
         
 
       }
@@ -809,6 +954,17 @@ font-size: 100px;
         right: 0;
         top: 0;
       }
+      .projeto_intro2 {
+        width: 90%;
+      }
+
+      .projeto_intro2 img {
+        height: 500px;
+        object-fit: cover;
+        width: 90%;
+        margin-bottom: 30px;
+      }
+
 
 }
 

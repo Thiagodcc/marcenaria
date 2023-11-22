@@ -22,6 +22,7 @@
                 <li> <a href="quem_somos.html" class="pagina_atual">quem somos</a></li>
 
            </ul>
+           <button class="mobile">Menu</button>
 
         </nav>
     </header>
@@ -99,10 +100,19 @@ Inovação Contínua: Abraçamos tecnologias avançadas e tendências de design 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+
+<script>        
+             
+    $('.mobile').click(function(){
+ $('.menu').slideToggle();
+});
+
+</script>
 
 
     <script>
@@ -124,9 +134,9 @@ Inovação Contínua: Abraçamos tecnologias avançadas e tendências de design 
             {ease: "power3.out",
             scrollTrigger: {
                 trigger: ".somos2",
-                start: ".caixa_quem_somos",
+                start: "top center",
                 endTrigger: ".somos2",
-                end: "center center",
+                end: "center top",
                 scrub: 1,
                 pin: false,
                 markers: true,
