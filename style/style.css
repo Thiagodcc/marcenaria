@@ -549,7 +549,7 @@ font-size: 100px;
 }
 
 /*telas grander com 2500px*/
-@media (min-width: 1441px) {
+@media (max-width: 1441px) {
     .secao{width:50%}
 
     .depoimento{
@@ -572,11 +572,11 @@ font-size: 100px;
         left: -15%;
     }
     .outros_projetos {
-        width: 60%;
+        width: 80%;
     }
 }
 /* telas media anos notebook*/
-@media (min-width: 1281px) {
+@media (max-width: 1281px) {
     .secao{width:70%}
     .secao img {
         width: 400px;
@@ -591,7 +591,7 @@ font-size: 100px;
 
 }
 /* telas de notebook pequenos*/
-@media (min-width: 821px) {
+@media (max-width: 821px) {
     .secao{width:70%}
     .depoimento .cliente img {
         width: 300px;
@@ -606,7 +606,7 @@ font-size: 100px;
 }
 
 /* telas de tablet*/
-@media (min-width: 500px) {
+@media (max-width: 500px) {
     .secao img {
         width: 350px;
         left: 50%;
