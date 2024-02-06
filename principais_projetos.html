@@ -19,7 +19,7 @@
                 <li> <a href="quem_somos.html" rel="next">quem somos</a></li>
 
            </ul>
-
+           <button class="mobile">Menu</button>
         </nav>
     </header>
 
@@ -39,41 +39,48 @@
     <section class="centro">
         <div class="caixa_projetos">
             <img src="img/projeto_painel_ripado.jpg" alt="sandra-rei-O1dDKmhedWc-unsplash">
-
-            <div class="tag_projetos">
-                <h2 class="titulo3 titulo1">Painel Ripado</h2>
-                <p class="projeto_nome"> cliente Ana</p>
-            </div>
+            <a href="projetos/projeto_cozinha1.html" rel="next">
+                <div class="tag_projetos">
+                    <h2 class="titulo3 titulo1">Painel Ripado</h2>
+                    <p class="projeto_nome"> cliente Ana</p>
+                </div>
+            </a>
         </div>
     </section>
 
     <section class="centro">
         <div class="caixa_projetos">
             <img src="img/projeto_ripado.jpg" alt="bilal-mansuri-AR4D-D1TgpM-unsplash">
-            <div class="tag_projetos">
-                <h2 class="titulo3 titulo1">divisorias</h2>
-                <p class="projeto_nome"> cliente João</p>
-            </div>
+            <a href="projetos/projeto_cozinha1.html" rel="next">
+                <div class="tag_projetos">
+                    <h2 class="titulo3 titulo1">divisorias</h2>
+                    <p class="projeto_nome"> cliente João</p>
+                </div>
+            </a>
         </div>
     </section>
 
     <section class="centro">
         <div class="caixa_projetos">
             <img src="img/projeto_ripado.jpg" alt="bilal-mansuri-AR4D-D1TgpM-unsplash">
-            <div class="tag_projetos">
-                <h2 class="titulo3 titulo1">divisorias</h2>
-                <p class="projeto_nome"> cliente João</p>
-            </div>
+            <a href="projetos/projeto_cozinha1.html" rel="next">
+                <div class="tag_projetos">
+                    <h2 class="titulo3 titulo1">divisorias</h2>
+                    <p class="projeto_nome"> cliente João</p>
+             </div>
+            </a>
         </div>
     </section>
 
     <section class="centro">
         <div class="caixa_projetos">
             <img src="img/projeto_ripado.jpg" alt="bilal-mansuri-AR4D-D1TgpM-unsplash">
-            <div class="tag_projetos">
-                <h2 class="titulo3 titulo1">divisorias</h2>
-                <p class="projeto_nome"> cliente João</p>
-            </div>
+            <a href="projetos/projeto_cozinha1.html" rel="next">
+                <div class="tag_projetos">
+                    <h2 class="titulo3 titulo1">divisorias</h2>
+                    <p class="projeto_nome"> cliente João</p>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -84,7 +91,7 @@
         <nav class="rodape">
             <img src="img/logo_menu.png" alt="logo">
            <ul class="menu">
-                <li> <a href="index.html">Home</a></li>
+                <li> <a href="html-css/">Home</a></li>
                 <li> <a href="index.html">Projetos</a></li>
                 <li> <a href="index.html">Parcerias</a></li>
                 <li> <a href="index.html">quem somos</a></li>
@@ -94,6 +101,44 @@
         </nav>
 
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+    <script>        
+             
+                $('.mobile').click(function(){
+             $('.menu').slideToggle();
+         });
+
+    </script>
+
+
+    <script>
+
+        //animando menu
+
+        let=tl = gsap.timeline({defaults:
+            {ease: "power3.out",
+            
+            }
+
+        });
+        tl.from(".cabeca", {x: 50, duration: 1, opacity: 0})
+        .from(".caixa_projetos", {opacity: 0, duration: 0.5, 'clip-path': 'polygon(0% 100%, 93% 100%, 100% 100%, 0% 100%);', scale: 0})
+        .from(".caixa_titulo img", {scale: 2,y: 50, duration: 2});
+     
+
+
+    </script>
 
 
 
